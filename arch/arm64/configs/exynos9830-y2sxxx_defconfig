@@ -3,6 +3,15 @@
 # Linux/arm64 4.19.325 Kernel Configuration
 #
 
+CONFIG_MODEL_Y2S=y
+
+# Camera
+# CONFIG_CAMERA_HST_V01 is not set
+CONFIG_CAMERA_HST_V02=y
+CONFIG_CAMERA_CIS_TOF_BUCK_USE=y
+CONFIG_CAMERA_CIS_IMX516_OBJ=y
+CONFIG_CAMERA_CIS_IMX518_OBJ=y
+
 #
 # Compiler: Android (8490178, based on r450784d) clang version 14.0.6 (https://android.googlesource.com/toolchain/llvm-project 4c603efb0cca074e9238af8b4106c30add4418f6)
 #
