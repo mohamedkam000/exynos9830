@@ -1,13 +1,4 @@
-# SPDX-License-Identifier: GPL-2.0
-#
-# General architecture dependent options
-#
-
-#
-# Note: arch/$(SRCARCH)/Kconfig needs to be included first so that it can
-# override the default values in this file.
-#
-source "arch/$(SRCARCH)/Kconfig"
+source "arch/arm64/Kconfig"
 
 menu "General architecture-dependent options"
 
