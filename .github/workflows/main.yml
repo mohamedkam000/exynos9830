@@ -1,0 +1,24 @@
+name: Crown Hooks
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-kernel:
+    name: Build Kernel
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Build
+        uses: mohamedkam000/kernel_build_action@main
+        with:
+          kernel-url: https://github.com/mohamedkam000/exynos9830
+          kernel-branch: main
+          config: exynos9830-y2sxxx_defconfig
+          arch: arm64
+          aosp-gcc: true
+          aosp-clang: true
+          android-version: 12
+          aosp-clang-version: r383902
+          ksu: true
+          ksu-other: true
+          ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
