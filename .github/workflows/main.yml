@@ -1,24 +1,29 @@
-name: Crown Hooks
-
+name: Build Kernel
 on:
   workflow_dispatch:
 
 jobs:
-  build-kernel:
-    name: Build Kernel
-    runs-on: ubuntu-22.04
+  Build-Kernel:
+    strategy:
+      fail-fast: false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
     steps:
-      - name: Build
-        uses: mohamedkam000/kernel_build_action@main
+      - name: Build Kernel
+        uses: dabao1955/kernel_build_action@main
         with:
           kernel-url: https://github.com/mohamedkam000/exynos9830
+          kernel-dir: Fury
           kernel-branch: main
           config: exynos9830-y2sxxx_defconfig
           arch: arm64
           aosp-gcc: true
           aosp-clang: true
+          ksu: true
+          ksu-version: main
           android-version: 12
           aosp-clang-version: r383902
-          ksu: true
-          #ksu-other: true
-          #ksu-url: https://github.com/KernelSU-Next/KernelSU-Next
+          disable-lto: true
+          anykernel3: true
