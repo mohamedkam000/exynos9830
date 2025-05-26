@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Build Kernel
-        uses: dabao1955/kernel_build_action@main
+        uses: mohamedkam000/kernel_build_action@main
         with:
           kernel-url: https://github.com/mohamedkam000/exynos9830
           kernel-dir: Fury
