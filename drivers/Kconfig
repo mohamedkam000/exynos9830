@@ -195,7 +195,7 @@ source "drivers/mcb/Kconfig"
 
 source "drivers/perf/Kconfig"
 
-source "drivers/ras/Kconfig"
+#source "drivers/ras/Kconfig"
 
 source "drivers/thunderbolt/Kconfig"
 
