@@ -778,17 +778,17 @@ void aer_print_error(struct pci_dev *dev, struct aer_err_info *info)
 		dev->vendor, dev->device,
 		info->status, info->mask);
 
-	__aer_print_error(dev, info);
+//	__aer_print_error(dev, info);
 
-	if (info->tlp_header_valid)
-		__print_tlp_header(dev, &info->tlp);
+//	if (info->tlp_header_valid)
+//		__print_tlp_header(dev, &info->tlp);
 
 out:
 	if (info->id && info->error_dev_num > 1 && info->id == id)
 		pci_err(dev, "  Error of this Agent is reported first\n");
 
-	trace_aer_event(dev_name(&dev->dev), (info->status & ~info->mask),
-			info->severity, info->tlp_header_valid, &info->tlp);
+//	trace_aer_event(dev_name(&dev->dev), (info->status & ~info->mask),
+//			info->severity, info->tlp_header_valid, &info->tlp);
 }
 
 static void aer_print_port_info(struct pci_dev *dev, struct aer_err_info *info)
@@ -853,8 +853,8 @@ void cper_print_aer(struct pci_dev *dev, int aer_severity,
 	if (tlp_header_valid)
 		__print_tlp_header(dev, &aer->header_log);
 
-	trace_aer_event(dev_name(&dev->dev), (status & ~mask),
-			aer_severity, tlp_header_valid, &aer->header_log);
+//	trace_aer_event(dev_name(&dev->dev), (status & ~mask),
+//			aer_severity, tlp_header_valid, &aer->header_log);
 }
 #endif
 
