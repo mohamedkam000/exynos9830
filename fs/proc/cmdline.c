@@ -102,6 +102,9 @@ static int __init proc_cmdline_init(void)
 	process_flag(FLAG_REPLACE, "androidboot.em.model=", "G996B"); // Bootloader status and Knox
 	process_flag(FLAG_REPLACE, "androidboot.revision=", "22"); // Samsung Knox FMP / FIPS
 	process_flag(FLAG_REPLACE, "androidboot.serialno=", "00000000000"); // Play Integrity API / SafetyNet
+	process_flag(FLAG_REPLACE, "androidboot.veritymode=", "enforcing"); // Bootloader status and Knox
+	process_flag(FLAG_REPLACE, "androidboot.verifiedboot=", "true"); // Samsung Knox FMP / FIPS
+	process_flag(FLAG_REPLACE, "androidboot.vbmeta.device_state=", "locked"); // Play Integrity API / SafetyNet
 //	process_flag(FLAG_REPLACE, "androidboot.warranty_bit=", "0"); // Bootloader status and Knox
 //	process_flag(FLAG_REPLACE, "androidboot.fmp_config=", "1"); // Samsung Knox FMP / FIPS
 //#endif
