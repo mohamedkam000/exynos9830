@@ -2,7 +2,6 @@ VERSION = 4
 PATCHLEVEL = 19
 SUBLEVEL = 177
 EXTRAVERSION = -android13-4-00003-ga7208022a7ea-ab10815828
-NAME = "People's Front"
 
 PHONY := _all
 _all:
