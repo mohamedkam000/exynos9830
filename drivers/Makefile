@@ -203,7 +203,7 @@ else
 endif
 
 # vision driver
-obj-$(CONFIG_VISION_SUPPORT)	+= vision/
+#obj-$(CONFIG_VISION_SUPPORT)	+= vision/
 
 #Fingerprint
 obj-$(CONFIG_SENSORS_FINGERPRINT)       += fingerprint/
@@ -212,24 +212,24 @@ obj-$(CONFIG_SENSORS_FINGERPRINT)       += fingerprint/
 obj-y				+= samsung/
 
 # Sensorhub driver
-obj-$(CONFIG_SENSORS_SSP)	+= sensorhub/
+#obj-$(CONFIG_SENSORS_SSP)	+= sensorhub/
 
 # optics sensor driver
-obj-$(CONFIG_SENSORS_TCS3407)	+= optics/
+#obj-$(CONFIG_SENSORS_TCS3407)	+= optics/
 
 # Motor
-obj-y                           += motor/
+#obj-y                           += motor/
 
 # uH
-obj-$(CONFIG_UH)        += uh/
+#obj-$(CONFIG_UH)        += uh/
 
 # streamline
-ifeq ($(CONFIG_GATOR), y)
-	obj-$(CONFIG_GATOR)				+= gator/
-endif
+#ifeq ($(CONFIG_GATOR), y)
+#	obj-$(CONFIG_GATOR)				+= gator/
+#endif
 
 # KUnit
-obj-y				+= kunit/
+#obj-y				+= kunit/
 
 # SPU signature verify
 obj-$(CONFIG_SPU_VERIFY) += spu_verify/
